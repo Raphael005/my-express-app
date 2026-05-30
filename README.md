@@ -21,6 +21,44 @@ DEBUG=my-app:* npm start
 
 The app will be available at [http://localhost:3000](http://localhost:3000).
 
+## API
+
+### `GET /`
+
+Returns the home page.
+
+**Response**
+- Status: `200 OK`
+- Content-Type: `text/html`
+- Body: Rendered HTML page with the Express welcome message.
+
+**Example**
+```bash
+curl http://localhost:3000/
+```
+
+---
+
+### `GET /users`
+
+Returns a placeholder users resource.
+
+**Response**
+- Status: `200 OK`
+- Content-Type: `text/html`
+- Body: `respond with a resource`
+
+**Example**
+```bash
+curl http://localhost:3000/users
+```
+
+---
+
+### Error responses
+
+Unknown routes return a `404 Not Found` HTML error page rendered by the Express error handler.
+
 ## Testing
 
 ```bash
